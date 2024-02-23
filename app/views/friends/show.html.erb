@@ -1,0 +1,24 @@
+<div class="container mt-5">
+  <div class="card p-3" style="background-color: #f8f9fa;">
+    <h5 class="card-title" style="font-size: 24px;"><%= @friend.first_name %> <%= @friend.last_name %></h5>
+    <div class="card-body">
+      <div>
+        <p style="font-size: 18px;">
+           <%= @friend.email %> |
+          <%= @friend.phone %> |
+           <%= @friend.twitter %>
+        </p>
+      </div>
+    </div>
+    <div class="card-footer">
+      <div class="btn-group" role="group">
+        <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-dark btn-sm" %>   </div>
+      <div class="btn-group float-right" role="group">
+        <%= button_to "Delete", @friend, method: :delete, class:"btn btn-danger",data: { confirm: "Are you sure?" }, "data-turbolinks": "false"  %>
+      </div>
+      <div class="btn-group" role="group">
+        <%= link_to "Back", friends_path,class:"btn btn-dark btn-sm" %>
+      </div>
+    </div>
+  </div>
+</div>
