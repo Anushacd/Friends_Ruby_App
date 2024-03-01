@@ -23,6 +23,8 @@ default: &default
 development:
   <<: *default
   database: friends_app_dev
+  username: postgres
+  password: "@Elroy23041999"
 
 test:
   <<: *default

@@ -187,6 +187,7 @@ GEM
       thor (~> 1.0)
       zeitwerk (~> 2.5)
     rake (13.1.0)
+    redis (4.8.1)
     regexp_parser (2.9.0)
     reline (0.4.2)
       io-console (~> 0.5)
@@ -258,6 +259,7 @@ DEPENDENCIES
   pg
   puma (~> 5.0)
   rails (~> 7.0.8)
+  redis (~> 4.0)
   sassc
   selenium-webdriver
   sprockets-rails
@@ -267,7 +269,7 @@ DEPENDENCIES
   web-console
 
 RUBY VERSION
-   ruby 3.2.3p157
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.5.5
