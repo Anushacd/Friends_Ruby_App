@@ -19,6 +19,7 @@ gem 'bootstrap', '~> 5.1.3'
 gem 'redis', '~> 4.0'
 
 group :development, :test do
+  gem 'byebug'
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 end
 

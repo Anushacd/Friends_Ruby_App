@@ -23,8 +23,8 @@ default: &default
 development:
   <<: *default
   database: friends_app_dev
-  username: postgres
-  password: "@Elroy23041999"
+  username: <%= ENV["DATABASE_USERNAME"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
 
 test:
   <<: *default
