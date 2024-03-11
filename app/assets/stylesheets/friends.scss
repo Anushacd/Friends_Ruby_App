@@ -1,10 +1,11 @@
 /* app/assets/stylesheets/application.css or app/assets/stylesheets/scaffold.scss */
+@import "colors";
 
 .friend-details {
-  border: 1px solid #ccc;
+  border: 1px solid $border-color;
   padding: 10px;
   margin-bottom: 20px;
-  background-color: #f8f9fa;
+  background-color: $background-color;
 }
 
 .friend-details p {
