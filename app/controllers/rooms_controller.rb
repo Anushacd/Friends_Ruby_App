@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
     before_action :authenticate_user!
+
     def index
       @room = Room.new
       @rooms = Room.public_rooms
@@ -24,8 +25,7 @@ class RoomsController < ApplicationController
     end
 
     private 
-
-    def room_params
+      def room_params
         params.require(:room).permit(:name)
-    end
+      end
 end

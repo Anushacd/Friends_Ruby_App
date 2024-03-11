@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   # root 'friends#index'
 
   resources :rooms do
-    resources :messages
+    resources :messages do
+      put 'update', on: :member
+    end
   end
 
   resources :users

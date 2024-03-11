@@ -3,10 +3,15 @@
     <div class=" d-flex align-items-center">      
       <% unless message.room.is_private %>
         <h6 class="name"> <%= message.user.email %> </h6>
-        <%# <h1>Message..................................</h1> %>
       <% end %>
     </div>
-
     <%= message.content %>
+  </div>
+
+  <div class="edit-form" data-message-edit-target="editForm">
+    <%= form_with(model: message, method: :put, url: room_message_path(message.room, message), remote: true, id: "edit-message-form-#{message.id}") do |form| %>
+      <%= form.text_field :content %>
+      <%= form.submit 'Save' %>
+    <% end %>
   </div>
 </div>
