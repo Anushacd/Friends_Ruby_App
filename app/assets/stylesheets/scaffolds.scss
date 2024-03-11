@@ -1,9 +1,10 @@
 /* app/assets/stylesheets/scaffold.scss */
 
 /* Apply styles to scaffolded views */
+@import "colors";
 .scaffold-container {
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: $background-color;
 }
 
 .scaffold-heading {
