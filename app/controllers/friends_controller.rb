@@ -3,7 +3,6 @@ class FriendsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
 
-
   # GET /friends or /friends.json
   def index
     @friends = Friend.all

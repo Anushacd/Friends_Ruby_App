@@ -1,0 +1,17 @@
+$primary-color: #555555;
+$secondary-color: #343a40;
+$border-color: #ccc;
+$background-color: #f8f9fa;
+
+.message-box {
+  background-color: $primary-color;
+}
+.user_list_item,
+.room_list_item {
+  background-color: $secondary-color !important;
+}
+.friend-details {
+  border: 1px solid $border-color;
+  background-color: $background-color;
+}
+

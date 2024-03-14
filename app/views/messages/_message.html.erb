@@ -1,0 +1,28 @@
+<div class="cont-<%= message.user.id %>">
+  <div class="message-box msg-<%= message.user.id %> " >
+    <div class=" d-flex align-items-center">      
+      <% unless message.room.is_private %>
+        <h6 class="name"> <%= message.user.email %> </h6>
+      <% end %>
+      <% if message.user == current_user %>
+      <div class="edit-icon">
+      <div class="toggle-bar">
+        <i class="bi bi-pencil" onclick="toggleCode('code-block-<%= message.id %>')"></i>
+        <div id="code-block-<%= message.id %>" style="display: none;">
+          <% if message.user == current_user %>
+            <div style="padding-bottom: 5px;" class="edit-form" data-message-edit-target="editForm">
+              <%= form_with(model: message, method: :put, url: room_message_path(message.room, message), remote: true, id: "edit-message-form-#{message.id}") do |form| %>
+                <%= form.text_field :content %>
+                <%= form.submit 'Save' %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+      <%= javascript_include_tag "editMessage"%>
+      </div>
+      <% end %>
+    </div>
+    <%= message.content %>
+  </div>
+</div>
