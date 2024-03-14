@@ -17,6 +17,8 @@ gem 'sassc'
 gem 'devise', '~> 4.9', '>= 4.9.3'
 gem 'bootstrap', '~> 5.1.3'
 gem 'redis', '~> 4.0'
+gem 'jquery-rails'
+gem 'rails-ujs'
 
 group :development, :test do
   gem 'byebug'
